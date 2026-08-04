@@ -24,12 +24,7 @@ const Stars = () => {
   if (!mounted) return null;
 
   return (
-    <div
-      className="fixed inset-0 -z-10 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse at bottom, #020617 0%, #09090b 100%)",
-      }}>
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-radial-[at_50%_100%] from-slate-900 to-zinc-950 to-75%">
       <div
         className="stars-layer w-[1px] h-[1px] rounded-full"
         style={{ boxShadow: stars1 }}
