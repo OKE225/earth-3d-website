@@ -11,16 +11,17 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Earth(props) {
-  const { nodes, materials } = useGLTF("/earth.gltf");
+  const { nodes, materials } = useGLTF("/earth/earth.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
         geometry={nodes.Object_4.geometry}
         material={materials["Scene_-_Root"]}
-        scale={1.128}
+        material-color="#93c5fd"
+        scale={1.125}
       />
     </group>
   );
 }
 
-useGLTF.preload("/earth.gltf");
+useGLTF.preload("/earth/earth.gltf");
