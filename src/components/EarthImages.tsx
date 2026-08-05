@@ -8,7 +8,7 @@ import desert from "../assets/desert.jpg";
 
 const EarthImages = () => {
   return (
-    <div className="bg-orange-500/40 h-screen flex items-end">
+    <div className="h-screen flex items-end">
       <div className=" grid grid-cols-3 gap-2">
         <Image src={ocean} />
         <Image src={forest} />

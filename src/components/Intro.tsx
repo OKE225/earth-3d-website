@@ -3,7 +3,7 @@ import Btn from "./Btn";
 
 const Intro = () => {
   return (
-    <div className="bg-rose-500/40 h-screen">
+    <div className="h-screen">
       <div className=" flex h-[55vh] flex-col items-center justify-end">
         <p className="text-3xl mb-5 font-light text-neutral-300">
           Our Home in the Cosmos

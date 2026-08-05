@@ -2,7 +2,7 @@ import StatCard from "./StatCard";
 
 const EarthStats = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center gap-2 bg-lime-500/40">
+    <div className="min-h-screen flex justify-center items-center gap-2">
       <StatCard title="Liquid Water">
         About 71% of Earth's surface is covered by water, mostly in oceans; this
         is essential for life as we know it

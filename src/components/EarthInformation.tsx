@@ -2,7 +2,7 @@ import EarthDetail from "./EarthDetail";
 
 const EarthInformation = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center bg-yellow-500/40">
+    <div className="min-h-screen flex flex-col justify-center">
       <h2 className="text-8xl font-libre font-medium text-zinc-50 tracking-wide leading-none">
         EARTH
       </h2>

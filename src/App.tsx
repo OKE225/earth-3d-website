@@ -32,7 +32,9 @@ const App = () => {
               autoRotateSpeed={0.5}
               target={[0, 1.25, 0]}
             />
-            <Suspense fallback={null}>{/* <Earth /> */}</Suspense>
+            <Suspense fallback={null}>
+              <Earth />
+            </Suspense>
           </Canvas>
         </div>
       </div>
