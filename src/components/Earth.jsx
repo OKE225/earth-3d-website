@@ -7,13 +7,64 @@ Source: https://sketchfab.com/3d-models/earth-f7a76c63ff1846afb2d606e5c8369c15
 Title: Earth
 */
 
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useScroll, useTransform } from "motion/react";
+import { useFrame } from "@react-three/fiber";
 
 export default function Earth(props) {
   const { nodes, materials } = useGLTF("/earth/earth.gltf");
+
+  const targetRef = useRef(null);
+
+  const { scrollYProgress } = useScroll();
+
+  const screen = 4;
+
+  const rotationX = useTransform(
+    scrollYProgress,
+    [0, 1 / screen, 2 / screen, 3 / screen, 4.15 / screen],
+    [0, Math.PI / 4, Math.PI / 4, Math.PI / -6, Math.PI / 8],
+  );
+
+  const rotationY = useTransform(
+    scrollYProgress,
+    [0, 2 / screen, 3 / screen, 4.15 / screen],
+    [0, -(Math.PI / 2), Math.PI / 2, Math.PI * 1.5],
+  );
+
+  const positionX = useTransform(
+    scrollYProgress,
+    [0, 1.75 / screen, 1.8 / screen, 2.1 / screen, 3 / screen, 3.5 / screen],
+    [0, 0, 0, 1.25, 1.25, 0],
+  );
+
+  const positionY = useTransform(
+    scrollYProgress,
+    [0, 1 / screen],
+    [0.05, 1.25],
+  );
+
+  const cameraZ = useTransform(
+    scrollYProgress,
+    [0, 1 / screen, 1.8 / screen, 2.1 / screen, 3 / screen, 4 / screen],
+    [1, 1.6, 1.6, 3.5, 3.75, 3],
+  );
+
+  useFrame(({ camera }) => {
+    if (!targetRef.current) return;
+
+    targetRef.current.rotation.x = rotationX.get();
+    targetRef.current.position.x = positionX.get();
+    targetRef.current.rotation.y = rotationY.get();
+
+    targetRef.current.position.y = positionY.get();
+
+    camera.position.z = cameraZ.get();
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={targetRef}>
       <mesh
         geometry={nodes.Object_4.geometry}
         material={materials["Scene_-_Root"]}
