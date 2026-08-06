@@ -24,9 +24,9 @@ const Stars = () => {
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-radial-[at_50%_100%] from-slate-900 to-zinc-950 to-75%">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-radial-[at_50%_100%] from-blue-950 to-zinc-950 to-80%">
       <div
-        className="stars-layer w-[1px] h-[1px] rounded-full"
+        className="stars-layer w-px h-px rounded-full"
         style={{ boxShadow: stars1 }}
       />
       <div
@@ -34,7 +34,7 @@ const Stars = () => {
         style={{ boxShadow: stars2 }}
       />
       <div
-        className="stars-layer3 w-[2px] h-[2px] rounded-full"
+        className="stars-layer3 w-0.5 h-0.5 rounded-full"
         style={{ boxShadow: stars3 }}
       />
 
