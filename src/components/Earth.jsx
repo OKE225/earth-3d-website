@@ -49,7 +49,7 @@ export default function Earth(props) {
 
   const cameraZ = useTransform(
     scrollYProgress,
-    [0, 1 / screen, 1.8 / screen, 2.1 / screen, 3 / screen, 4 / screen],
+    [0, 1 / screen, 1.8 / screen, 2.1 / screen, 3 / screen, 3.25 / screen],
     [1, 1.6, 1.6, 3.5, 3.75, 3],
   );
 
