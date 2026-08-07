@@ -7,3 +7,5 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/earth-website/",
 });
+
+// npx gh-pages -d dist -b gh-pages -f
