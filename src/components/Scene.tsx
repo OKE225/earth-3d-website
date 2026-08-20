@@ -1,6 +1,5 @@
 import { PerspectiveCamera } from "@react-three/drei";
 import Earth from "./Earth.jsx";
-import { Suspense } from "react";
 
 const Scene = () => {
   return (
@@ -13,9 +12,7 @@ const Scene = () => {
         far={1000}
       />
       <ambientLight intensity={2.25} />
-      <Suspense fallback={null}>
-        <Earth />
-      </Suspense>
+      <Earth />
     </>
   );
 };

@@ -5,6 +5,8 @@ import EarthImages from "./components/EarthImages.js";
 import EarthInformation from "./components/EarthInformation.js";
 import EarthStats from "./components/EarthStats.js";
 import Scene from "./components/Scene.js";
+import { Suspense } from "react";
+import EarthLoader from "./components/EarthLoader.js";
 
 const App = () => {
   return (
@@ -13,7 +15,9 @@ const App = () => {
         <Stars />
         <div className="h-full w-full">
           <Canvas>
-            <Scene />
+            <Suspense fallback={<EarthLoader />}>
+              <Scene />
+            </Suspense>
           </Canvas>
         </div>
       </div>
