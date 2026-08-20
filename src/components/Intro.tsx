@@ -9,7 +9,7 @@ const Intro = () => {
             Our Home in the Cosmos
           </p>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-libre font-medium text-zinc-50 tracking-wide leading-none mb-6 sm:mb-8 md:mb-10">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-libre font-medium text-zinc-50 tracking-wide leading-none mb-6 sm:mb-8 md:mb-10">
             EARTH
           </h1>
 

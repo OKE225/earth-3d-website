@@ -5,7 +5,7 @@ const EarthLoader = () => {
 
   return (
     <Html fullscreen>
-      <section className="pointer-events-none absolute bottom-25 left-1/2 w-fit -translate-x-1/2 sm:bottom-30 animate-bounce">
+      <section className="pointer-events-none absolute bottom-10 left-1/2 w-fit -translate-x-1/2 animate-bounce z-50">
         <div className="relative min-w-72 overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/50 px-6 py-5 text-white shadow-lg shadow-blue-950/30 backdrop-blur-sm sm:min-w-80 sm:px-8">
           <div className="pointer-events-none absolute -right-12 -top-12 h-28 w-28 rounded-full bg-blue-500/15 blur-3xl" />
 
